@@ -13,8 +13,37 @@ function listContacts(table) {
           "type": "flex",
           "altText": "Contacts",
           "contents": {
-            "type": "carousel",
-            "contents": data
+            // "type": "carousel",
+            // "contents": data
+            "type": "bubble",
+            "direction": "ltr",
+            "header": {
+              "type": "box",
+              "layout": "vertical",
+              "backgroundColor": "#05E903FF",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Contacts List",
+                  "weight": "bold",
+                  "color": "#FFFFFFFF",
+                  "align": "center",
+                  "contents": []
+                }
+              ]
+            },
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Contact",
+                  "align": "center",
+                  "contents": data
+                }
+              ]
+            }
           }
         }
       }

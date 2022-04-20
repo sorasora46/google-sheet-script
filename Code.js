@@ -9,9 +9,19 @@ function doPost(e) {
   var tableArray = [];
 
   switch (message) {
+    case 'lh':
+      tableArray = sheet1.getRange(2, 1, sheet1.getLastRow() - 1, sheet1.getLastColumn()).getValues();
+      var myData = listHomeworks(tableArray);
+      var replyJSON = ContentService.createTextOutput(JSON.stringify(myData)).setMimeType(ContentService.MimeType.JSON);
+      return replyJSON;
     case 'List Homeworks':
       tableArray = sheet1.getRange(2, 1, sheet1.getLastRow() - 1, sheet1.getLastColumn()).getValues();
       var myData = listHomeworks(tableArray);
+      var replyJSON = ContentService.createTextOutput(JSON.stringify(myData)).setMimeType(ContentService.MimeType.JSON);
+      return replyJSON;
+    case 'lc':
+      tableArray = sheet2.getRange(2, 1, sheet2.getLastRow() - 1, sheet2.getLastColumn()).getValues();
+      var myData = listContacts(tableArray);
       var replyJSON = ContentService.createTextOutput(JSON.stringify(myData)).setMimeType(ContentService.MimeType.JSON);
       return replyJSON;
     case 'List Contacts':

@@ -1,4 +1,4 @@
-function createJSONCT(name, contact) {
+function createJSONCT(name, className, phone, email) {
   return ({
     "type": "box",
     "layout": "vertical",
@@ -6,19 +6,19 @@ function createJSONCT(name, contact) {
     "contents": [
       {
         "type": "text",
-        "text": "Mr. Sorrawit Kwanja",
+        "text": name + " (" + className + ")",
         "weight": "bold",
         "align": "start",
         "contents": []
       },
       {
         "type": "text",
-        "text": "0881234567",
+        "text": phone+"",
         "contents": []
       },
       {
         "type": "text",
-        "text": "sorrawit.kwan@kmutt.ac.th",
+        "text": email,
         "align": "start",
         "contents": []
       },

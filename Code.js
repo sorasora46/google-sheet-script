@@ -31,12 +31,12 @@ function doPost(e) {
       return replyJSON;
     case 'lc':
       tableArray = sheet1.getRange(2, 1, sheet1.getLastRow() - 1, sheet1.getLastColumn()).getValues();
-      var myData = listHomeworks(tableArray);
+      var myData = listClasses(tableArray);
       var replyJSON = ContentService.createTextOutput(JSON.stringify(myData)).setMimeType(ContentService.MimeType.JSON);
       return replyJSON;
     case 'List Classes':
       tableArray = sheet1.getRange(2, 1, sheet1.getLastRow() - 1, sheet1.getLastColumn()).getValues();
-      var myData = listHomeworks(tableArray);
+      var myData = listClasses(tableArray);
       var replyJSON = ContentService.createTextOutput(JSON.stringify(myData)).setMimeType(ContentService.MimeType.JSON);
       return replyJSON;
   }

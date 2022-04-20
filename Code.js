@@ -19,7 +19,7 @@ function doPost(e) {
       var myData = listHomeworks(tableArray);
       var replyJSON = ContentService.createTextOutput(JSON.stringify(myData)).setMimeType(ContentService.MimeType.JSON);
       return replyJSON;
-    case 'lc':
+    case 'lct':
       tableArray = sheet2.getRange(2, 1, sheet2.getLastRow() - 1, sheet2.getLastColumn()).getValues();
       var myData = listContacts(tableArray);
       var replyJSON = ContentService.createTextOutput(JSON.stringify(myData)).setMimeType(ContentService.MimeType.JSON);
@@ -27,6 +27,16 @@ function doPost(e) {
     case 'List Contacts':
       tableArray = sheet2.getRange(2, 1, sheet2.getLastRow() - 1, sheet2.getLastColumn()).getValues();
       var myData = listContacts(tableArray);
+      var replyJSON = ContentService.createTextOutput(JSON.stringify(myData)).setMimeType(ContentService.MimeType.JSON);
+      return replyJSON;
+    case 'lc':
+      tableArray = sheet1.getRange(2, 1, sheet1.getLastRow() - 1, sheet1.getLastColumn()).getValues();
+      var myData = listHomeworks(tableArray);
+      var replyJSON = ContentService.createTextOutput(JSON.stringify(myData)).setMimeType(ContentService.MimeType.JSON);
+      return replyJSON;
+    case 'List Classes':
+      tableArray = sheet1.getRange(2, 1, sheet1.getLastRow() - 1, sheet1.getLastColumn()).getValues();
+      var myData = listHomeworks(tableArray);
       var replyJSON = ContentService.createTextOutput(JSON.stringify(myData)).setMimeType(ContentService.MimeType.JSON);
       return replyJSON;
   }

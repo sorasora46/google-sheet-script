@@ -2,12 +2,18 @@ function createJSONCT(name, contact) {
   return ({
     "type": "box",
     "layout": "vertical",
+    "spacing": "md",
     "contents": [
       {
         "type": "text",
         "text": "Mr. Sorrawit Kwanja",
         "weight": "bold",
         "align": "start",
+        "contents": []
+      },
+      {
+        "type": "text",
+        "text": "0881234567",
         "contents": []
       },
       {

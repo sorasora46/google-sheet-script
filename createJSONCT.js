@@ -6,7 +6,7 @@ function createJSONCT(name, className, phone, email) {
     "contents": [
       {
         "type": "text",
-        "text": name + " (" + className + ")",
+        "text": "Mr./Mrs. " +  name + " (" + className + ")",
         "weight": "bold",
         "align": "start",
         "contents": []

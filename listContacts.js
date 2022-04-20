@@ -1,7 +1,7 @@
 function listContacts(table) {
   var data = [];
   for (var i = 0; i < table.length; i++) {
-    data.push(createJSONCT(table[i][0], table[i][1]));
+    data.push(createJSONCT(table[i][0], table[i][1]), table[i][2], table[i][3]);
   }
 
   return ({

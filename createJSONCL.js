@@ -8,7 +8,7 @@ function createJSONCL(className, isHW) {
             "contents": [
                 {
                     "type": "text",
-                    "text": className,
+                    "text": className + " (Homework)",
                     "weight": "bold",
                     "align": "start",
                     "contents": []
